@@ -913,7 +913,7 @@ GameObject:
   - component: {fileID: 765105607}
   - component: {fileID: 765105608}
   m_Layer: 0
-  m_Name: Shadows_Sheet_1
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 2134829953}
   - component: {fileID: 2134829954}
   m_Layer: 0
-  m_Name: Shadows_Sheet_2
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
