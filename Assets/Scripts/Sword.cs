@@ -8,11 +8,16 @@ public class Sword : MonoBehaviour
     private PlayerControls _playerControls;
     private Animator _animator;
     private static readonly int Attack1 = Animator.StringToHash("Attack");
+    private PlayerController _playerController;
+    private ActiveWeapon _activeWeapon;
+    private Camera _camera;
 
     private void Awake()
     {
         _playerControls = new PlayerControls();
         _animator = GetComponent<Animator>();
+        _playerController = GetComponentInParent<PlayerController>();
+        _activeWeapon = GetComponentInParent<ActiveWeapon>();
     }
 
     private void OnEnable()
@@ -23,13 +28,31 @@ public class Sword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _camera = Camera.main;
         // Subscribe to the "Attack Event" += pass nothing through it => function Event to subscribe to.
         _playerControls.Combat.Attack.started += _ => Attack();
+    }
+
+    private void Update()
+    {
+        MouseFollowWithOffset();
     }
 
     private void Attack()
     {
         // Fire the sword animation.
         _animator.SetTrigger(Attack1);
+    }
+    
+    
+    
+    private void MouseFollowWithOffset()
+    {
+        var playerScreenPoint = _camera.WorldToScreenPoint(_playerController.transform.position);
+        var mousePos = Input.mousePosition;
+
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        
+        _activeWeapon.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, angle) : Quaternion.Euler(0, 0, angle);
     }
 }
