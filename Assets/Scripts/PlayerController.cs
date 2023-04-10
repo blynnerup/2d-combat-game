@@ -1,7 +1,14 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool FacingLeft
+    {
+        get => _facingLeft;
+        set => _facingLeft = value;
+    }
+    
     [SerializeField] private float moveSpeed = 1f;
 
     private PlayerControls _playerControls;
@@ -12,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("moveY");
     private Camera _camera;
     private SpriteRenderer _spriteRenderer;
+
+    private bool _facingLeft = false;
 
     private void Start()
     {
@@ -68,10 +77,12 @@ public class PlayerController : MonoBehaviour
         if (mousePos.x < playerScreenPoint.x)
         {
             _spriteRenderer.flipX = true;
+            FacingLeft = true;
         }
         else
         {
-            _spriteRenderer.flipX = false;   
+            _spriteRenderer.flipX = false;
+            FacingLeft = false;
         }
     }
 }
