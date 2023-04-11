@@ -7,7 +7,8 @@ public class Sword : MonoBehaviour
 {
     [SerializeField] private GameObject slashAnimationPrefab;
     [SerializeField] private Transform slashAnimatorSpawnPoint;
-
+    [SerializeField] private Transform weaponCollider;
+    
     private PlayerControls _playerControls;
     private Animator _animator;
     private static readonly int Attack1 = Animator.StringToHash("Attack");
@@ -47,11 +48,17 @@ public class Sword : MonoBehaviour
     {
         // Fire the sword animation.
         _animator.SetTrigger(Attack1);
+        weaponCollider.gameObject.SetActive(true);
 
         slashAnimation = Instantiate(slashAnimationPrefab, slashAnimatorSpawnPoint.position, Quaternion.identity);
         slashAnimation.transform.parent = transform.parent;
     }
 
+    public void DoneAttackingAnimationEvent()
+    {
+        weaponCollider.gameObject.SetActive(false);
+    }
+    
     public void SwingUpWithAnimation()
     {
         slashAnimation.gameObject.transform.rotation = Quaternion.Euler(-180, 0, 0);
@@ -80,5 +87,6 @@ public class Sword : MonoBehaviour
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         
         _activeWeapon.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, angle) : Quaternion.Euler(0, 0, angle);
+        weaponCollider.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, 0) : Quaternion.Euler(0, 0, 0);
     }
 }
