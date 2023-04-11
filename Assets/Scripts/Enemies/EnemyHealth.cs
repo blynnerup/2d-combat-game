@@ -9,10 +9,12 @@ public class EnemyHealth : MonoBehaviour
 
     private int _currentHealth;
     private Knockback knockback;
+    private Flashing _flashing;
 
     private void Awake()
     {
         knockback = GetComponent<Knockback>();
+        _flashing = GetComponent<Flashing>();
     }
 
     private void Start()
@@ -24,6 +26,13 @@ public class EnemyHealth : MonoBehaviour
     {
         _currentHealth -= damage;
         knockback.GetKnockedBack(PlayerController.Instance.transform, 15f);
+        StartCoroutine(_flashing.FlashRoutine());
+        StartCoroutine(CheckDetectDeathRoutine());
+    }
+
+    private IEnumerator CheckDetectDeathRoutine()
+    {
+        yield return new WaitForSeconds(_flashing.GetRestoreMatTime());
         DetectDeath();
     }
 
