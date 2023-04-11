@@ -24,6 +24,7 @@ public class Sword : MonoBehaviour
         _animator = GetComponent<Animator>();
         _playerController = GetComponentInParent<PlayerController>();
         _activeWeapon = GetComponentInParent<ActiveWeapon>();
+        weaponCollider.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -49,6 +50,7 @@ public class Sword : MonoBehaviour
         // Fire the sword animation.
         _animator.SetTrigger(Attack1);
         weaponCollider.gameObject.SetActive(true);
+        Debug.Log("Attacking");
 
         slashAnimation = Instantiate(slashAnimationPrefab, slashAnimatorSpawnPoint.position, Quaternion.identity);
         slashAnimation.transform.parent = transform.parent;
@@ -56,6 +58,7 @@ public class Sword : MonoBehaviour
 
     public void DoneAttackingAnimationEvent()
     {
+        Debug.Log("Done");
         weaponCollider.gameObject.SetActive(false);
     }
     

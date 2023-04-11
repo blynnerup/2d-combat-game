@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 28a7e6a80da0c0f4ea9cb0a73046087b, type: 2}
-  restoreDefaultMatTime: 0.2
+  restoreDefaultMatTime: 0.1
 --- !u!1 &6720873682154459897
 GameObject:
   m_ObjectHideFlags: 0
