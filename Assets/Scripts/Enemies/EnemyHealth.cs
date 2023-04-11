@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,12 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private int startingHealth = 3;
 
     private int _currentHealth;
+    private Knockback knockback;
+
+    private void Awake()
+    {
+        knockback = GetComponent<Knockback>();
+    }
 
     private void Start()
     {
@@ -16,8 +23,8 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
+        knockback.GetKnockedBack(PlayerController.Instance.transform, 15f);
         DetectDeath();
-        Debug.Log(_currentHealth);
     }
 
     private void DetectDeath()
