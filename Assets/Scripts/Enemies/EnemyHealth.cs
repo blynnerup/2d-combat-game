@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth = 3;
+    [SerializeField] private GameObject deathVfxPrefab;
 
     private int _currentHealth;
     private Knockback knockback;
@@ -40,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (_currentHealth <= 0)
         {
+            Instantiate(deathVfxPrefab, transform.position, quaternion.identity);
             Destroy(gameObject);
         }
     }

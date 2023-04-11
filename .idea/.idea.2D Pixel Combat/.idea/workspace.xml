@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="" />
+    <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SlashAnim.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SlashAnim.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Flashing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Knockback.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/SelfDestroy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,7 +96,7 @@
       <workItem from="1681026661818" duration="4535000" />
       <workItem from="1681115806637" duration="2860000" />
       <workItem from="1681131598422" duration="2950000" />
-      <workItem from="1681180397249" duration="11198000" />
+      <workItem from="1681180397249" duration="12822000" />
     </task>
     <servers />
   </component>
