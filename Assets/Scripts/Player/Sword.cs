@@ -8,6 +8,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private GameObject slashAnimationPrefab;
     [SerializeField] private Transform slashAnimatorSpawnPoint;
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private float swordAttackCd = .5f;
     
     private PlayerControls _playerControls;
     private Animator _animator;
@@ -15,8 +16,9 @@ public class Sword : MonoBehaviour
     private PlayerController _playerController;
     private ActiveWeapon _activeWeapon;
     private Camera _camera;
+    private bool _attackButtonDown, _isAttacking = false;
 
-    private GameObject slashAnimation;
+    private GameObject _slashAnimation;
 
     private void Awake()
     {
@@ -37,23 +39,43 @@ public class Sword : MonoBehaviour
     {
         _camera = Camera.main;
         // Subscribe to the "Attack Event" += pass nothing through it => function Event to subscribe to.
-        _playerControls.Combat.Attack.started += _ => Attack();
+        _playerControls.Combat.Attack.started += _ => StartAttacking();
+        _playerControls.Combat.Attack.canceled += _ => StopAttacking();
     }
 
     private void Update()
     {
         MouseFollowWithOffset();
+        Attack();
+    }
+
+    private void StartAttacking()
+    {
+        _attackButtonDown = true;
+    }
+
+    private void StopAttacking()
+    {
+        _attackButtonDown = false;
     }
 
     private void Attack()
     {
-        // Fire the sword animation.
-        _animator.SetTrigger(Attack1);
-        weaponCollider.gameObject.SetActive(true);
-        Debug.Log("Attacking");
+        if (_attackButtonDown && !_isAttacking){
+            // Fire the sword animation.
+            _animator.SetTrigger(Attack1);
+            weaponCollider.gameObject.SetActive(true);
+            _isAttacking = true;
+            _slashAnimation = Instantiate(slashAnimationPrefab, slashAnimatorSpawnPoint.position, Quaternion.identity);
+            _slashAnimation.transform.parent = transform.parent;
+            StartCoroutine(AttackCdRoutine());
+        }
+    }
 
-        slashAnimation = Instantiate(slashAnimationPrefab, slashAnimatorSpawnPoint.position, Quaternion.identity);
-        slashAnimation.transform.parent = transform.parent;
+    private IEnumerator AttackCdRoutine()
+    {
+        yield return new WaitForSeconds(swordAttackCd);
+        _isAttacking = false;
     }
 
     public void DoneAttackingAnimationEvent()
@@ -64,21 +86,21 @@ public class Sword : MonoBehaviour
     
     public void SwingUpWithAnimation()
     {
-        slashAnimation.gameObject.transform.rotation = Quaternion.Euler(-180, 0, 0);
+        _slashAnimation.gameObject.transform.rotation = Quaternion.Euler(-180, 0, 0);
 
         if (_playerController.FacingLeft)
         {
-            slashAnimation.GetComponent<SpriteRenderer>().flipX  = true;
+            _slashAnimation.GetComponent<SpriteRenderer>().flipX  = true;
         }
     }
 
     public void SwingDownFlipAnimation()
     {
-        slashAnimation.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        _slashAnimation.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (_playerController.FacingLeft)
         {
-            slashAnimation.GetComponent<SpriteRenderer>().flipX  = true;
+            _slashAnimation.GetComponent<SpriteRenderer>().flipX  = true;
         }
     }
     
