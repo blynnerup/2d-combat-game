@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
     
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float dashSpeed = 4f;
+    [SerializeField] private TrailRenderer trailRenderer;
 
     private PlayerControls _playerControls;
     private Vector2 _movement;
@@ -23,10 +27,12 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     private bool _facingLeft = false;
+    private bool _isDashing = false;
 
     private void Start()
     {
         _camera = Camera.main;
+        _playerControls.Combat.Dash.performed += _ => Dash();
     }
 
     private void Awake()
@@ -87,5 +93,28 @@ public class PlayerController : MonoBehaviour
             _spriteRenderer.flipX = false;
             FacingLeft = false;
         }
+    }
+
+    private void Dash()
+    {
+        if (!_isDashing)
+        {        
+            _isDashing = true;
+            moveSpeed *= dashSpeed;
+            trailRenderer.emitting = true;
+            StartCoroutine(EndDashRoutine());
+        }
+
+    }
+
+    private IEnumerator EndDashRoutine()
+    {
+        float dashTime = .2f;
+        float dashCd = .25f;
+        yield return new WaitForSeconds(dashTime);
+        moveSpeed /= dashSpeed;
+        trailRenderer.emitting = false;
+        yield return new WaitForSeconds(dashCd);
+        _isDashing = false;
     }
 }
