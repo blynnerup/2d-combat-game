@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private static readonly int MoveY = Animator.StringToHash("moveY");
     private Camera _camera;
     private SpriteRenderer _spriteRenderer;
+    private float _startingMoveSpeed;
 
     private bool _facingLeft = false;
     private bool _isDashing = false;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         _camera = Camera.main;
         _playerControls.Combat.Dash.performed += _ => Dash();
+        _startingMoveSpeed = moveSpeed;
     }
 
     private void Awake()
@@ -112,7 +114,7 @@ public class PlayerController : MonoBehaviour
         float dashTime = .2f;
         float dashCd = .25f;
         yield return new WaitForSeconds(dashTime);
-        moveSpeed /= dashSpeed;
+        moveSpeed = _startingMoveSpeed;
         trailRenderer.emitting = false;
         yield return new WaitForSeconds(dashCd);
         _isDashing = false;

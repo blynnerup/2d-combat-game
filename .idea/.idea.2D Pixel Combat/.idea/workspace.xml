@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player Controls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player Controls.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +94,7 @@
       <workItem from="1681115806637" duration="2860000" />
       <workItem from="1681131598422" duration="2950000" />
       <workItem from="1681180397249" duration="13416000" />
-      <workItem from="1681260946728" duration="3700000" />
+      <workItem from="1681260946728" duration="4007000" />
     </task>
     <servers />
   </component>
