@@ -80,7 +80,6 @@ public class Sword : MonoBehaviour
 
     public void DoneAttackingAnimationEvent()
     {
-        Debug.Log("Done");
         weaponCollider.gameObject.SetActive(false);
     }
     
