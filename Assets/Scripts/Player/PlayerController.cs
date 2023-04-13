@@ -81,7 +81,7 @@ namespace Player
 
         private void AdjustPlayerFacingDirection()
         {
-            var playerScreenPoint = _camera.WorldToScreenPoint(transform.position);
+            var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
             var mousePos = Input.mousePosition;
 
             if (mousePos.x < playerScreenPoint.x)

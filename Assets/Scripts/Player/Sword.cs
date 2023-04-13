@@ -106,7 +106,7 @@ public class Sword : MonoBehaviour
     
     private void MouseFollowWithOffset()
     {
-        var playerScreenPoint = _camera.WorldToScreenPoint(_playerController.transform.position);
+        var playerScreenPoint = Camera.main.WorldToScreenPoint(_playerController.transform.position);
         var mousePos = Input.mousePosition;
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
