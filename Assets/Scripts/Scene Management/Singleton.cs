@@ -13,7 +13,10 @@ namespace Scene_Management
                 Instance = (T)this;
             }
 
-            DontDestroyOnLoad(gameObject);
+            if (!gameObject.transform.parent)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
     }
 }
