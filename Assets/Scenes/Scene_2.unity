@@ -88802,7 +88802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6a9b07fa8492b4e90602a357df1578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Sceme_1
+  sceneToLoad: Scene_1
   sceneTransitionName: South_Entrance
 --- !u!1 &5030406604998598283
 GameObject:

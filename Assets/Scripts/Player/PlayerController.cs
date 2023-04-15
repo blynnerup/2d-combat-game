@@ -50,11 +50,6 @@ namespace Player
             _playerControls.Enable();
         }
 
-        private void OnDisable()
-        {
-            _playerControls.Disable();
-        }
-
         private void Update()
         {
             PlayerInput();
