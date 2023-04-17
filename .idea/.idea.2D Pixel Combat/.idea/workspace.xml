@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="" />
+    <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +139,7 @@
       <workItem from="1681350459734" duration="3874000" />
       <workItem from="1681437255448" duration="9153000" />
       <workItem from="1681531317596" duration="2224000" />
-      <workItem from="1681624530930" duration="686000" />
+      <workItem from="1681624530930" duration="1540000" />
     </task>
     <servers />
   </component>
