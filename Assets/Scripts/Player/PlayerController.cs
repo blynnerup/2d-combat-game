@@ -15,6 +15,7 @@ namespace Player
         [SerializeField] private float moveSpeed = 1f;
         [SerializeField] private float dashSpeed = 4f;
         [SerializeField] private TrailRenderer trailRenderer;
+        [SerializeField] private Transform weaponCollider;
 
         private PlayerControls _playerControls;
         private Vector2 _movement;
@@ -59,6 +60,11 @@ namespace Player
         {
             AdjustPlayerFacingDirection();
             Move();
+        }
+
+        public Transform GetWeaponCollider()
+        {
+            return weaponCollider;
         }
 
         private void PlayerInput()

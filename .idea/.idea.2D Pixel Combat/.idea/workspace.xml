@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Sword/Entry.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Sword/Entry.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Sword.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +17,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1d5ae28f5ca3488dbddca7794af65eb116e800/e3/9ee6fac8/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27586baf39bf4babbfd8a2caabe8e22846ac00/a2/88bd0c8c/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27586baf39bf4babbfd8a2caabe8e22846ac00/b3/89be6e10/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/effae19715234d0bbeb48915456bbcf53c00/3d/4187df7f/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInfo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.3/Runtime/Intrinsics/v128.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.3/Tests/Editor/EditmodeTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.3/Tests/Runtime/Shared/060-TestEnums.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/InputFieldEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/ScrollRectEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,10 +121,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="42620">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34568">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="42620" />
+      <option name="pid" value="34568" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,7 +153,8 @@
       <workItem from="1681531317596" duration="2224000" />
       <workItem from="1681624530930" duration="1540000" />
       <workItem from="1681808970670" duration="1870000" />
-      <workItem from="1681877265708" duration="6076000" />
+      <workItem from="1681877265708" duration="8278000" />
+      <workItem from="1681995608530" duration="5400000" />
     </task>
     <servers />
   </component>
@@ -161,82 +170,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
-          <line>49</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerController.cs" initialLine="49" containingFunctionPresentation="method 'OnEnable'">
-            <startOffsets>
-              <option value="1529" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1554" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
-          <line>41</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerController.cs" initialLine="41" containingFunctionPresentation="method 'Awake'">
-            <startOffsets>
-              <option value="1256" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1295" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Scene Management/Singleton.cs</url>
-          <line>15</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Scene Management\Singleton.cs" initialLine="15" containingFunctionPresentation="method 'Awake'">
-            <startOffsets>
-              <option value="412" />
-            </startOffsets>
-            <endOffsets>
-              <option value="445" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Scene Management/Singleton.cs</url>
-          <line>12</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Scene Management\Singleton.cs" initialLine="12" containingFunctionPresentation="method 'Awake'">
-            <startOffsets>
-              <option value="365" />
-            </startOffsets>
-            <endOffsets>
-              <option value="384" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs</url>
-          <line>54</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerController.cs" initialLine="54" containingFunctionPresentation="method 'OnDisable'">
-            <startOffsets>
-              <option value="1621" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1647" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs</url>
-          <line>47</line>
+          <line>61</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Inventory\ActiveInventory.cs" initialLine="47" containingFunctionPresentation="method 'ChangeActiveWeapon'">
             <startOffsets>
-              <option value="1067" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="1181" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs</url>
+          <line>50</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Inventory\ActiveInventory.cs" initialLine="50" containingFunctionPresentation="method 'ChangeActiveWeapon'">
+            <startOffsets>
+              <option value="1124" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1178" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

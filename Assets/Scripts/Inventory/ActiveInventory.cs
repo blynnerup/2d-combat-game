@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 public class ActiveInventory : MonoBehaviour
@@ -17,6 +18,8 @@ public class ActiveInventory : MonoBehaviour
     private void Start()
     {
         _playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
+        
+        ToggleActiveHighlight(0);
     }
 
     private void OnEnable()
@@ -26,7 +29,7 @@ public class ActiveInventory : MonoBehaviour
 
     private void ToggleActiveSlot(int numValue)
     {
-        ToggleActiveHighlight(numValue);
+        ToggleActiveHighlight(numValue - 1);
     }
 
     private void ToggleActiveHighlight(int indexNum)
@@ -38,13 +41,32 @@ public class ActiveInventory : MonoBehaviour
             inventorySlot.GetChild(0).gameObject.SetActive(false);
         }
         
-        transform.GetChild(indexNum - 1).GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(indexNum).GetChild(0).gameObject.SetActive(true);
         
         ChangeActiveWeapon();
     }
 
     private void ChangeActiveWeapon()
     {
-        Debug.Log(transform.GetChild(activeSlotIndexNum - 1).GetComponent<InventorySlot>().GetWeaponInfo().weaponPrefab.name);
+        if (ActiveWeapon.Instance.CurrentActiveWeapon != null)
+        {
+            Destroy(ActiveWeapon.Instance.CurrentActiveWeapon.gameObject);
+        }
+
+        if (!transform.GetChild(activeSlotIndexNum).GetComponentInChildren<InventorySlot>())
+        {
+            ActiveWeapon.Instance.WeaponNull();
+            return;
+        }
+        
+        var weaponToSpawn = transform.GetChild(activeSlotIndexNum).GetComponentInChildren<InventorySlot>()
+            .GetWeaponInfo().weaponPrefab;
+
+        GameObject newWeapon =
+            Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform.position, Quaternion.identity);
+
+        newWeapon.transform.parent = ActiveWeapon.Instance.transform;
+        
+        ActiveWeapon.Instance.NewWeapon(newWeapon.GetComponent<MonoBehaviour>());
     }
 }

@@ -7,7 +7,7 @@ namespace Player
 {
     public class ActiveWeapon : Scene_Management.Singleton<ActiveWeapon>
     {
-        [SerializeField] private MonoBehaviour currentActiveWeapon;
+        public MonoBehaviour CurrentActiveWeapon { get; private set; }
         
         private PlayerControls _playerControls;
         private bool _attackButtonDown, _isAttacking = false;
@@ -37,6 +37,16 @@ namespace Player
 
         }
 
+        public void NewWeapon(MonoBehaviour newWeapon)
+        {
+            CurrentActiveWeapon = newWeapon;
+        }
+
+        public void WeaponNull()
+        {
+            CurrentActiveWeapon = null;
+        }
+
         public void ToggleIsAttacking(bool value)
         {
             _isAttacking = value;
@@ -63,7 +73,7 @@ namespace Player
             {
                 _isAttacking = true;
             
-                (currentActiveWeapon as IWeapon).Attack();   
+                (CurrentActiveWeapon as IWeapon).Attack();   
             }
         }
     }
