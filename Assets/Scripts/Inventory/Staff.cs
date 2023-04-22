@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Inventory;
@@ -6,9 +7,32 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour, IWeapon
 {
+    private Transform _weaponCollider;
+
+    private void Start()
+    {
+        _weaponCollider = PlayerController.Instance.GetWeaponCollider();
+    }
+    
+    private void Update()
+    {
+        MouseFollowWithOffset();
+    }
+
     public void Attack()
     {
         Debug.Log("Staff pew pew");
         ActiveWeapon.Instance.ToggleIsAttacking(false);
+    }
+    
+    private void MouseFollowWithOffset()
+    {
+        var playerScreenPoint = Camera.main.WorldToScreenPoint(PlayerController.Instance.transform.position);
+        var mousePos = Input.mousePosition;
+
+        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        
+        ActiveWeapon.Instance.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, angle) : Quaternion.Euler(0, 0, angle);
+        _weaponCollider.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, 0) : Quaternion.Euler(0, 0, 0);
     }
 }
