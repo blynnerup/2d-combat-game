@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Staff.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Staff.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Staff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Staff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +152,8 @@
       <workItem from="1681808970670" duration="1870000" />
       <workItem from="1681877265708" duration="8278000" />
       <workItem from="1681995608530" duration="6152000" />
-      <workItem from="1682163348713" duration="543000" />
+      <workItem from="1682163348713" duration="1160000" />
+      <workItem from="1682274068475" duration="759000" />
     </task>
     <servers />
   </component>

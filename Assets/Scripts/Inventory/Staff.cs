@@ -1,19 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Inventory;
 using Player;
 using UnityEngine;
 
 public class Staff : MonoBehaviour, IWeapon
 {
-    private Transform _weaponCollider;
-
-    private void Start()
-    {
-        _weaponCollider = PlayerController.Instance.GetWeaponCollider();
-    }
-    
+    [SerializeField] private WeaponInfo weaponInfo;
     private void Update()
     {
         MouseFollowWithOffset();
@@ -22,7 +13,6 @@ public class Staff : MonoBehaviour, IWeapon
     public void Attack()
     {
         Debug.Log("Staff pew pew");
-        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
     
     private void MouseFollowWithOffset()
@@ -33,6 +23,10 @@ public class Staff : MonoBehaviour, IWeapon
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         
         ActiveWeapon.Instance.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, angle) : Quaternion.Euler(0, 0, angle);
-        _weaponCollider.transform.rotation = mousePos.x < playerScreenPoint.x ? Quaternion.Euler(0, -180, 0) : Quaternion.Euler(0, 0, 0);
+    }
+    
+    public WeaponInfo GetWeaponInfo()
+    {
+        return weaponInfo;
     }
 }

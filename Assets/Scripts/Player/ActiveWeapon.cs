@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Inventory;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace Player
         private PlayerControls _playerControls;
         private bool _attackButtonDown, _isAttacking = false;
         private Camera _camera;
-
+        private float _timeBetweenAttacks;
 
         protected override void Awake()
         {
@@ -29,6 +30,8 @@ namespace Player
             // Subscribe to the "Attack Event" += pass nothing through it => function Event to subscribe to.
             _playerControls.Combat.Attack.started += _ => StartAttacking();
             _playerControls.Combat.Attack.canceled += _ => StopAttacking();
+            
+            AttackCooldown();
         }
 
         private void Update()
@@ -40,17 +43,16 @@ namespace Player
         public void NewWeapon(MonoBehaviour newWeapon)
         {
             CurrentActiveWeapon = newWeapon;
+            AttackCooldown();
+            _timeBetweenAttacks = ((IWeapon)CurrentActiveWeapon).GetWeaponInfo().weaponCooldown;
         }
 
         public void WeaponNull()
         {
             CurrentActiveWeapon = null;
         }
-
-        public void ToggleIsAttacking(bool value)
-        {
-            _isAttacking = value;
-        }
+        
+        
         private void OnEnable()
         {
             _playerControls.Enable();
@@ -71,10 +73,22 @@ namespace Player
         {
             if (_attackButtonDown && !_isAttacking)
             {
-                _isAttacking = true;
-            
-                (CurrentActiveWeapon as IWeapon).Attack();   
+                AttackCooldown();
+                ((IWeapon)CurrentActiveWeapon).Attack();
             }
+        }
+
+        private void AttackCooldown()
+        {
+            _isAttacking = true;
+            StopAllCoroutines();
+            StartCoroutine(TimeBetweenAttackingRoutine());
+        }
+
+        private IEnumerator TimeBetweenAttackingRoutine()
+        {
+            yield return new WaitForSeconds(_timeBetweenAttacks);
+            _isAttacking = false;
         }
     }
 }
