@@ -10,7 +10,7 @@ namespace Misc
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            Debug.Log("hit");
+            if (!col.gameObject.GetComponent<DamageSource>() && !col.gameObject.GetComponent<Projectile>()) return;
             Instantiate(destroyVfx, transform.position, quaternion.identity);
             Destroy(gameObject);
         }
