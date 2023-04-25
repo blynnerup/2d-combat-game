@@ -1,3 +1,4 @@
+using System;
 using Inventory;
 using Player;
 using UnityEngine;
@@ -5,6 +6,17 @@ using UnityEngine;
 public class Staff : MonoBehaviour, IWeapon
 {
     [SerializeField] private WeaponInfo weaponInfo;
+    [SerializeField] private GameObject magicLaser;
+    [SerializeField] private Transform magicLaserSpawnPoint;
+
+    private Animator _animator;
+    private static readonly int AttackHash = Animator.StringToHash("Attack");
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         MouseFollowWithOffset();
@@ -12,7 +24,7 @@ public class Staff : MonoBehaviour, IWeapon
 
     public void Attack()
     {
-        Debug.Log("Staff pew pew");
+        _animator.SetTrigger(AttackHash);
     }
     
     private void MouseFollowWithOffset()
@@ -28,5 +40,10 @@ public class Staff : MonoBehaviour, IWeapon
     public WeaponInfo GetWeaponInfo()
     {
         return weaponInfo;
+    }
+
+    public void SpawnStaffProjectileAnimEvent()
+    {
+        GameObject newLaser = Instantiate(magicLaser, magicLaserSpawnPoint.position, Quaternion.identity);
     }
 }
