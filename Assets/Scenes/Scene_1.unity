@@ -2102,7 +2102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3011,7 +3011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76478,7 +76478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -77220,7 +77220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -77290,7 +77290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -109590,7 +109590,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284375053428236464, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771281336087947682, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
+      propertyPath: m_Intensity
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771281336087947682, guid: b226d8d88488ef64a834ea9124d4b287, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.666
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

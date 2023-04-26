@@ -71,7 +71,7 @@ namespace Player
 
         private void Attack()
         {
-            if (_attackButtonDown && !_isAttacking)
+            if (_attackButtonDown && !_isAttacking && CurrentActiveWeapon)
             {
                 AttackCooldown();
                 ((IWeapon)CurrentActiveWeapon).Attack();
