@@ -25,6 +25,7 @@ namespace Player
         private static readonly int MoveY = Animator.StringToHash("moveY");
         private Camera _camera;
         private SpriteRenderer _spriteRenderer;
+        private Knockback _knockback;
         private float _startingMoveSpeed;
 
         private bool _facingLeft = false;
@@ -44,6 +45,7 @@ namespace Player
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _knockback = GetComponent<Knockback>();
         }
 
         private void OnEnable()
@@ -77,6 +79,7 @@ namespace Player
 
         private void Move()
         {
+            if (_knockback.GettingKnockedBack) return;
             _rigidbody2D.MovePosition(_rigidbody2D.position + _movement * (moveSpeed * Time.fixedDeltaTime));    
         }
 

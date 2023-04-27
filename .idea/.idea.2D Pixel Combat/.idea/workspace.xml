@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Staff/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Staff/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ActiveWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/MagicLaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/MagicLaser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Staff.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Scriptable Objects/Staff.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Sword.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,10 +119,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7192">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="46988">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7192" />
+      <option name="pid" value="46988" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -164,7 +159,8 @@
       <workItem from="1682321738409" duration="4827000" />
       <workItem from="1682402907346" duration="12607000" />
       <workItem from="1682454790755" duration="684000" />
-      <workItem from="1682474879490" duration="10126000" />
+      <workItem from="1682474879490" duration="10907000" />
+      <workItem from="1682567336649" duration="2623000" />
     </task>
     <servers />
   </component>
@@ -193,17 +189,17 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Inventory/Staff.cs</url>
-          <line>26</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Inventory\Staff.cs" initialLine="26" containingFunctionPresentation="method 'Attack'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
+          <line>45</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerHealth.cs" initialLine="45" containingFunctionPresentation="method 'TakeDamage'">
             <startOffsets>
-              <option value="583" />
+              <option value="1156" />
             </startOffsets>
             <endOffsets>
-              <option value="616" />
+              <option value="1179" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
