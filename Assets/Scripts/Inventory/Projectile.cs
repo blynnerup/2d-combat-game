@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem.iOS;
+using UnityEngine.Serialization;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 22f;
     [SerializeField] private GameObject particleOnHitPrefabVfx;
+    [SerializeField] private bool isEnemyProjectile = false;
+    [SerializeField] private float projectileRange = 10f;
 
-    private WeaponInfo _weaponInfo;
     private Vector3 _startPosition;
 
     private void Start()
@@ -24,27 +26,37 @@ public class Projectile : MonoBehaviour
         MoveProjectile();
     }
 
-    public void UpdateWeaponInfo(WeaponInfo weaponInfo)
+    public void UpdatePorjectileRange(float projectileRange)
     {
-        _weaponInfo = weaponInfo;
+        this.projectileRange = projectileRange;
     }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
         EnemyHealth enemyHealth = col.gameObject.GetComponent<EnemyHealth>();
         Indestructible indestructible = col.gameObject.GetComponent<Indestructible>();
+        PlayerHealth playerHealth = col.gameObject.GetComponent<PlayerHealth>();
 
-        if (enemyHealth || indestructible)
+        if (!col.isTrigger && (enemyHealth || indestructible || playerHealth))
         {
-            enemyHealth?.TakeDamage(_weaponInfo.weaponDamage);
-            Destroy(gameObject);
-            Instantiate(particleOnHitPrefabVfx, transform.position, transform.rotation);    
+            var spawnTransform = transform;
+            if ((playerHealth && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
+            {
+                playerHealth.TakeDamage(1, transform);
+                Instantiate(particleOnHitPrefabVfx, spawnTransform.position, spawnTransform.rotation);    
+                Destroy(gameObject);
+            } else if (!col.isTrigger && indestructible)
+            {
+                Instantiate(particleOnHitPrefabVfx, spawnTransform.position, spawnTransform.rotation);    
+                Destroy(gameObject);
+            }
+            
         }
     }
 
     private void DetectFireDistance()
     {
-        if (Vector3.Distance(transform.position, _startPosition) > _weaponInfo.weaponRange)
+        if (Vector3.Distance(transform.position, _startPosition) > projectileRange)
         {
             Destroy(gameObject);
         }

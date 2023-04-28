@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Enemies;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -33,16 +34,18 @@ public class PlayerHealth : MonoBehaviour
     {
         EnemyAi enemyAi = collision.gameObject.GetComponent<EnemyAi>();
 
-        if (enemyAi && _canTakeDamage)
+        if (enemyAi)
         {
-            TakeDamage(1);
-            _knockback.GetKnockedBack(collision.gameObject.transform, knockbackThrustAmount);
-            StartCoroutine(_flashing.FlashRoutine());
+            TakeDamage(1, collision.transform);
         }
     }
 
-    private void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount, Transform hitTransform)
     {
+        if (!_canTakeDamage) return;
+        
+        _knockback.GetKnockedBack(hitTransform, knockbackThrustAmount);
+        StartCoroutine(_flashing.FlashRoutine());
         _canTakeDamage = false;
         _currentHealth -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
