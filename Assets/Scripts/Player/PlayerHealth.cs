@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Enemies;
+using Misc;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!_canTakeDamage) return;
         
+        ScreenShakeManager.Instance.ShakeScreen();
         _knockback.GetKnockedBack(hitTransform, knockbackThrustAmount);
         StartCoroutine(_flashing.FlashRoutine());
         _canTakeDamage = false;

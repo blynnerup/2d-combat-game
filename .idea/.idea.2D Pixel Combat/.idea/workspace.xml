@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape Projectile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape Projectile.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/Cameras.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/Cameras.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/Managers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Knockback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Parallax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Random Idle Animation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenShakeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/SpriteFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/TransparentDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/SelfDestroy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.3/Tests/Editor/EditmodeTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.3/Tests/Runtime/Shared/060-TestEnums.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.5/Runtime/Impulse/CinemachineIndependentImpulseListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.6/Runtime/Debugging/DebugUpdater.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/InputFieldEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -172,7 +175,7 @@
       <workItem from="1682737137122" duration="3538000" />
       <workItem from="1682794799881" duration="2147000" />
       <workItem from="1682920835824" duration="6714000" />
-      <workItem from="1683015960029" duration="11088000" />
+      <workItem from="1683015960029" duration="12698000" />
     </task>
     <servers />
   </component>
@@ -202,42 +205,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
-          <line>48</line>
+          <line>50</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerHealth.cs" initialLine="45" containingFunctionPresentation="method 'TakeDamage'">
             <startOffsets>
-              <option value="1217" />
+              <option value="1280" />
             </startOffsets>
             <endOffsets>
-              <option value="1240" />
+              <option value="1303" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/GrapeProjectile.cs</url>
-          <line>56</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\GrapeProjectile.cs" initialLine="55" containingFunctionPresentation="method 'MoveGrapeShadowRoutine'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenShakeManager.cs</url>
+          <line>17</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\ScreenShakeManager.cs" initialLine="17" containingFunctionPresentation="method 'ShakeScreen'">
             <startOffsets>
-              <option value="1949" />
+              <option value="393" />
             </startOffsets>
             <endOffsets>
-              <option value="2016" />
+              <option value="419" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/GrapeProjectile.cs</url>
-          <line>52</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\GrapeProjectile.cs" initialLine="51" containingFunctionPresentation="method 'MoveGrapeShadowRoutine'">
-            <startOffsets>
-              <option value="1822" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1887" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
