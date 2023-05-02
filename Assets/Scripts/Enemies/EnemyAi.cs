@@ -8,7 +8,7 @@ namespace Enemies
     public class EnemyAi : MonoBehaviour
     {
         [SerializeField] private float roamChangeDirFloat = 2f;
-        [SerializeField] private float attackRange = 5;
+        [SerializeField] private float attackRange = 0;
         [SerializeField] private MonoBehaviour enemyType;
         [SerializeField] private float attackCooldown = 1;
         [SerializeField] private bool stopMovingWhileAttacking = false;

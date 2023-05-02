@@ -26,9 +26,14 @@ public class Projectile : MonoBehaviour
         MoveProjectile();
     }
 
-    public void UpdatePorjectileRange(float projectileRange)
+    public void UpdateProjectileRange(float projectileRange)
     {
         this.projectileRange = projectileRange;
+    }
+
+    public void UpdateProjectileSpeed(float updatedMoveSpeed)
+    {
+        moveSpeed = updatedMoveSpeed;
     }
     
     private void OnTriggerEnter2D(Collider2D col)

@@ -24,7 +24,13 @@ public class EnemyPathfinding : MonoBehaviour
         if(_knockback.GettingKnockedBack) {return;}
         _rigidbody2D.MovePosition(_rigidbody2D.position + _moveDirection * (moveSpeed * Time.fixedDeltaTime));
 
-        _spriteRenderer.flipX = _moveDirection.x < 0;
+        if (_moveDirection.x < 0)
+        {
+            _spriteRenderer.flipX = true;
+        } else if (_moveDirection.x > 0)
+        {
+            _spriteRenderer.flipX = false;
+        }
     }
 
     public void MoveTo(Vector2 targetPosition)
