@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAi.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyPathfinding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyPathfinding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Grape/Grape Attack Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Grape/Grape Attack Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Enemies/Grape/Grape Walk Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Enemies/Grape/Grape Walk Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape Projectile.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape Projectile.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +20,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/effae19715234d0bbeb48915456bbcf53c00/3d/4187df7f/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/GrapeProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemies/IEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
@@ -129,10 +124,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23916">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35500">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23916" />
+      <option name="pid" value="35500" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -177,7 +172,7 @@
       <workItem from="1682737137122" duration="3538000" />
       <workItem from="1682794799881" duration="2147000" />
       <workItem from="1682920835824" duration="6714000" />
-      <workItem from="1683015960029" duration="4661000" />
+      <workItem from="1683015960029" duration="11088000" />
     </task>
     <servers />
   </component>
@@ -219,30 +214,30 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAi.cs</url>
-          <line>78</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\EnemyAi.cs" initialLine="78" containingFunctionPresentation="method 'Attacking'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/GrapeProjectile.cs</url>
+          <line>56</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\GrapeProjectile.cs" initialLine="55" containingFunctionPresentation="method 'MoveGrapeShadowRoutine'">
             <startOffsets>
-              <option value="2181" />
+              <option value="1949" />
             </startOffsets>
             <endOffsets>
-              <option value="2210" />
+              <option value="2016" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/Grape.cs</url>
-          <line>24</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\Grape.cs" initialLine="23" containingFunctionPresentation="method 'Attack'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemies/GrapeProjectile.cs</url>
+          <line>52</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Enemies\GrapeProjectile.cs" initialLine="51" containingFunctionPresentation="method 'MoveGrapeShadowRoutine'">
             <startOffsets>
-              <option value="563" />
+              <option value="1822" />
             </startOffsets>
             <endOffsets>
-              <option value="597" />
+              <option value="1887" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
