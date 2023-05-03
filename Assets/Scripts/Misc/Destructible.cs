@@ -11,6 +11,7 @@ namespace Misc
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (!col.gameObject.GetComponent<DamageSource>() && !col.gameObject.GetComponent<Projectile>()) return;
+            GetComponent<PickupSpawner>().DropItems();
             Instantiate(destroyVfx, transform.position, quaternion.identity);
             Destroy(gameObject);
         }
