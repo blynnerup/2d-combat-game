@@ -12,7 +12,7 @@ namespace Misc
         {
             if (!col.gameObject.GetComponent<DamageSource>() && !col.gameObject.GetComponent<Projectile>()) return;
             GetComponent<PickupSpawner>().DropItems();
-            Instantiate(destroyVfx, transform.position, quaternion.identity);
+            Instantiate(destroyVfx, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

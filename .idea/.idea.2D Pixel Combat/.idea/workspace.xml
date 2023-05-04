@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/Bush.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/Bush.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Gold Coin/Gold Coin.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Gold Coin/Gold Coin.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Gold Coin/Spinning.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Gold Coin/Spinning.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gold Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gold Coin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/NoiseSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/NoiseSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,10 +129,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="55152">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="55152" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -176,7 +178,8 @@
       <workItem from="1682794799881" duration="2147000" />
       <workItem from="1682920835824" duration="6714000" />
       <workItem from="1683015960029" duration="12698000" />
-      <workItem from="1683143225475" duration="1121000" />
+      <workItem from="1683143225475" duration="1790000" />
+      <workItem from="1683188252601" duration="3157000" />
     </task>
     <servers />
   </component>
@@ -191,19 +194,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Inventory/Projectile.cs</url>
-          <line>40</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Inventory\Projectile.cs" initialLine="25" containingFunctionPresentation="method 'OnTriggerEnter2D'">
-            <startOffsets>
-              <option value="978" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1047" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
           <line>50</line>
@@ -229,6 +219,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs</url>
+          <line>53</line>
+          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\Pickup.cs" initialLine="47" containingFunctionPresentation="method 'OnTriggerEnter2D'">
+            <startOffsets>
+              <option value="1429" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1481" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
