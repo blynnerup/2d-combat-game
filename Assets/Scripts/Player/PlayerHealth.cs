@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using Cinemachine;
 using Enemies;
 using Misc;
+using Scene_Management;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Singleton<PlayerHealth>
 {
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float knockbackThrustAmount = 10f;
@@ -20,8 +21,9 @@ public class PlayerHealth : MonoBehaviour
     private Knockback _knockback;
     private Flashing _flashing;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _knockback = GetComponent<Knockback>();
         _flashing = GetComponent<Flashing>();
     }
@@ -39,6 +41,11 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(1, collision.transform);
         }
+    }
+
+    public void HealDamage()
+    {
+        _currentHealth++;
     }
 
     public void TakeDamage(int damageAmount, Transform hitTransform)

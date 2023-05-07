@@ -3,10 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base Death VFX.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base Death VFX.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/Bush.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/Bush.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ghost Death VFX.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ghost Death VFX.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gold Coin.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gold Coin.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grape Death VFX.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Grape Death VFX.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile VFX.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile VFX.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slash Animator Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slash Animator Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime Death VFX.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Slime Death VFX.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/PickupSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/PickupSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +194,8 @@
       <workItem from="1683188252601" duration="3157000" />
       <workItem from="1683383851171" duration="2053000" />
       <workItem from="1683447559825" duration="142000" />
+      <workItem from="1683448641907" duration="602000" />
+      <workItem from="1683461848101" duration="6481000" />
     </task>
     <servers />
   </component>
@@ -196,13 +212,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
-          <line>50</line>
+          <line>57</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerHealth.cs" initialLine="45" containingFunctionPresentation="method 'TakeDamage'">
             <startOffsets>
-              <option value="1280" />
+              <option value="1415" />
             </startOffsets>
             <endOffsets>
-              <option value="1303" />
+              <option value="1438" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
@@ -222,13 +238,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs</url>
-          <line>53</line>
+          <line>61</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\Pickup.cs" initialLine="47" containingFunctionPresentation="method 'OnTriggerEnter2D'">
             <startOffsets>
-              <option value="1425" />
+              <option value="1579" />
             </startOffsets>
             <endOffsets>
-              <option value="1477" />
+              <option value="1631" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
