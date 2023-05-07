@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using Player;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class Pickup : MonoBehaviour
@@ -13,8 +13,8 @@ public class Pickup : MonoBehaviour
     [SerializeField] private AnimationCurve animationCurve;
     [SerializeField] private float heightY = 1.5f;
     [SerializeField] private float popDuration = 1;
-    [SerializeField] private float minAngle = 90;
-    [SerializeField] private float angle = 180;
+    [SerializeField] private float minAngle = 10;
+    [SerializeField] private float angle = 40;
 
     private Vector3 _moveDir;
     private Rigidbody2D _rigidbody2D;
@@ -60,7 +60,10 @@ public class Pickup : MonoBehaviour
     private IEnumerator AnimationCurveSpawnRoutine()
     {
         Vector2 startPoint = transform.position;
-        Vector2 endPoint = RandomVector2(angle, minAngle);
+        float randomX = startPoint.x + Random.Range(-2, 2);
+        float randomY = startPoint.y + Random.Range(-1, 1);
+        
+        Vector2 endPoint = new Vector2(randomX, randomY);
 
         float timePassed = 0;
 
@@ -75,10 +78,5 @@ public class Pickup : MonoBehaviour
             
             yield return null;
         }
-    }
-    
-    public Vector2 RandomVector2(float startAngle, float angleMin){
-        float random = Random.value * angle + angleMin;
-        return new Vector2(Mathf.Cos(random), Mathf.Sin(random));
     }
 }
