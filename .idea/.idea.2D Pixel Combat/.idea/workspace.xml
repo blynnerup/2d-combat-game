@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ghost.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Ghost.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape/Grape.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Grape/Grape.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/UI_Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/UI_Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Gixel SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Gixel SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Destructible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/EconomyManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Flashing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Knockback.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Parallax.cs" root0="FORCE_HIGHLIGHTING" />
@@ -37,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/SpriteFade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/TransparentDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/SelfDestroy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Stamina.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene Management/AreaExit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene Management/BaseSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene Management/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -184,7 +185,7 @@
       <workItem from="1683447559825" duration="142000" />
       <workItem from="1683448641907" duration="602000" />
       <workItem from="1683461848101" duration="7236000" />
-      <workItem from="1683534602880" duration="3411000" />
+      <workItem from="1683534602880" duration="9162000" />
     </task>
     <servers />
   </component>
@@ -201,13 +202,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
-          <line>59</line>
+          <line>60</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerHealth.cs" initialLine="45" containingFunctionPresentation="method 'TakeDamage'">
             <startOffsets>
-              <option value="1540" />
+              <option value="1601" />
             </startOffsets>
             <endOffsets>
-              <option value="1563" />
+              <option value="1624" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
@@ -227,13 +228,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs</url>
-          <line>61</line>
+          <line>62</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\Pickup.cs" initialLine="47" containingFunctionPresentation="method 'OnTriggerEnter2D'">
             <startOffsets>
-              <option value="1579" />
+              <option value="1591" />
             </startOffsets>
             <endOffsets>
-              <option value="1631" />
+              <option value="1643" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />

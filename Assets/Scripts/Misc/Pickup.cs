@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Misc;
 using Player;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -95,16 +96,15 @@ public class Pickup : MonoBehaviour
         {
             case PickUpType.GoldCoin:
                 // do gold stuff
-                Debug.Log("Gold coin");
+                EconomyManager.Instance.UpdateCurrentGold();
                 break;
             case PickUpType.HealthGlobe:
                 // heal player
                 PlayerHealth.Instance.HealDamage();
-                Debug.Log("Health");
                 break;
             case PickUpType.StaminaGlobe:
                 // regen stamina
-                Debug.Log("Stamina");
+                Stamina.Instance.RefreshStamina();
                 break;
         }
     }
