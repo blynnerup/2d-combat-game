@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Scene_Management;
 using UnityEngine;
@@ -36,6 +37,7 @@ namespace Player
             _camera = Camera.main;
             _playerControls.Combat.Dash.performed += _ => Dash();
             _startingMoveSpeed = moveSpeed;
+            ActiveInventory.Instance.EquipStartingWeapon();
         }
 
         protected override void Awake() {
@@ -51,6 +53,11 @@ namespace Player
         private void OnEnable()
         {
             _playerControls.Enable();
+        }
+
+        private void OnDisable()
+        {
+            _playerControls.Disable();
         }
 
         private void Update()
@@ -79,7 +86,7 @@ namespace Player
 
         private void Move()
         {
-            if (_knockback.GettingKnockedBack) return;
+            if (_knockback.GettingKnockedBack || PlayerHealth.Instance.IsDead) return;
             _rigidbody2D.MovePosition(_rigidbody2D.position + _movement * (moveSpeed * Time.fixedDeltaTime));    
         }
 

@@ -50,6 +50,7 @@ public class Pickup : MonoBehaviour
         else
         {
             _moveDir = Vector3.zero;
+            moveSpeed = 0;
         }
     }
 
@@ -105,6 +106,9 @@ public class Pickup : MonoBehaviour
             case PickUpType.StaminaGlobe:
                 // regen stamina
                 Stamina.Instance.RefreshStamina();
+                break;
+            default:
+                Debug.Log("Unknown pickup");
                 break;
         }
     }

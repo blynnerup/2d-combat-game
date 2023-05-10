@@ -2,16 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Player;
+using Scene_Management;
 using UnityEngine;
 
-public class ActiveInventory : MonoBehaviour
+public class ActiveInventory : Singleton<ActiveInventory>
 {
     private int activeSlotIndexNum = 0;
 
     private PlayerControls _playerControls;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _playerControls = new PlayerControls();
     }
 
@@ -19,6 +21,10 @@ public class ActiveInventory : MonoBehaviour
     {
         _playerControls.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
         
+    }
+
+    public void EquipStartingWeapon()
+    {
         ToggleActiveHighlight(0);
     }
 

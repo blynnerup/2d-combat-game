@@ -56,6 +56,8 @@ namespace Enemies
         
             _enemyPathfinding.MoveTo(_roamPosition);
 
+            if(PlayerController.Instance == null) return;
+            
             if (Vector2.Distance(transform.position, PlayerController.Instance.transform.position) <= attackRange)
             {
                 _state = State.Attacking;

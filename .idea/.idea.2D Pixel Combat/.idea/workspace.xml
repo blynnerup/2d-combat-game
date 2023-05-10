@@ -3,11 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="80387fa2-04db-467d-acb7-a81ee142b235" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2D Pixel Combat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/UI_Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene Management/UI_Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Town.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Town.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyAi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ActiveInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Destructible.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Stamina.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Stamina.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Environment/Flower-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Environment/Flower-Sheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Cursor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Cursor.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,10 +138,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35280">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35280" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -186,6 +194,9 @@
       <workItem from="1683448641907" duration="602000" />
       <workItem from="1683461848101" duration="7236000" />
       <workItem from="1683534602880" duration="9162000" />
+      <workItem from="1683600842849" duration="2634000" />
+      <workItem from="1683641875919" duration="791000" />
+      <workItem from="1683691970178" duration="1325000" />
     </task>
     <servers />
   </component>
@@ -201,40 +212,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
-          <line>60</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Player\PlayerHealth.cs" initialLine="45" containingFunctionPresentation="method 'TakeDamage'">
-            <startOffsets>
-              <option value="1601" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1624" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/ScreenShakeManager.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\ScreenShakeManager.cs" initialLine="17" containingFunctionPresentation="method 'ShakeScreen'">
-            <startOffsets>
-              <option value="393" />
-            </startOffsets>
-            <endOffsets>
-              <option value="419" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Misc/Pickup.cs</url>
-          <line>62</line>
+          <line>63</line>
           <properties documentPath="D:\Source\Games\2D Pixel Combat\Assets\Scripts\Misc\Pickup.cs" initialLine="47" containingFunctionPresentation="method 'OnTriggerEnter2D'">
             <startOffsets>
-              <option value="1591" />
+              <option value="1618" />
             </startOffsets>
             <endOffsets>
-              <option value="1643" />
+              <option value="1670" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
